@@ -1,6 +1,6 @@
 FROM docker:stable-git
 
-RUN apk add --no-cache curl bash ca-certificates jq python py-pip
+RUN apk add --no-cache curl bash ca-certificates jq python2 py2-pip
 
 RUN pip install -U pip && pip install awscli \
     && curl -SL https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl > /usr/local/bin/kubectl \
